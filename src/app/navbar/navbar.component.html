@@ -1,0 +1,14 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <span>
+            <a mat-button (click)="toMovies()" target="_blank" matTooltip="Movies">myFlix</a>
+        </span>
+        <span class="example-spacer"></span>
+        <button mat-icon-button (click)="toUserProfile()" matTooltip="UserProfile" class="example-icon">
+            <mat-icon>person</mat-icon>
+        </button>
+        <button mat-icon-button (click)="logOut()" matTooltip="Logout" class="example-icon">
+            <mat-icon>logout</mat-icon>
+        </button>
+    </mat-toolbar-row>
+</mat-toolbar>

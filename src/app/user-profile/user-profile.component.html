@@ -1,0 +1,45 @@
+<app-navbar></app-navbar>
+<div class="profile">
+    <h2>Profile</h2>
+    <p><span style="font-weight: bold;">Username:</span> {{user.Username}}</p>
+    <p><span style="font-weight: bold;">Email:</span> {{user.Email}}</p>
+
+    <mat-card style="box-shadow: none;">
+        <h2>Update Profile</h2>
+        <mat-card-content>
+            <form class="update-form">
+                <mat-form-field>
+                    <input matInput type="text" placeholder="Username" [(ngModel)]="userData.Username" name="username"
+                        required />
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput type="password" placeholder="Password" [(ngModel)]="userData.Password" minlength="8"
+                        name="password" required />
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput type="email" placeholder="Email" [(ngModel)]="userData.Email" name="email"
+                        required />
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput type="date" placeholder="Birthdate" [(ngModel)]="userData.Birthday"
+                        name="birthdate">
+                </mat-form-field>
+            </form>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-raised-button (click)="updateUser()" color="primary" style="margin: 5px;">Update</button>
+            <button mat-raised-button (click)="deleteUser()" color="primary">Delete
+                Account</button>
+        </mat-card-actions>
+    </mat-card>
+
+    <mat-list>
+        <h2>Favorite Movies</h2>
+        <mat-list-item *ngFor="let movie of favoriteMovies">
+            <img matListItemAvatar src="{{movie.ImagePath}}" />
+            <div matListItemTitle>{{movie.Title}}</div>
+            <div matListItemLine>{{movie.Director.Name}}</div>
+        </mat-list-item>
+    </mat-list>
+
+</div>
