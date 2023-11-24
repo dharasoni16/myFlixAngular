@@ -8,7 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "deploy": "ng deploy --base-href=/myFlixAngular/ && npx ngh --dir docs/",
-    "docs": "typedoc --out docs/src"
+    "docs": "typedoc --out documenttypedocs/src"
   },
   "private": true,
   "dependencies": {
